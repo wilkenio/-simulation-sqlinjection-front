@@ -63,6 +63,8 @@ Para construir e executar a aplicação usando Docker, siga estes passos:
 
     Acesse a aplicação em `http://localhost:8080/`.
 
+**Nota:** A configuração do Docker inclui um arquivo `nginx.conf` personalizado que permite o roteamento do lado do cliente (SPA routing), resolvendo problemas de 404 ao navegar diretamente para rotas como `/login`, `/users`, etc.
+
 ## 🚨 Propósito Educacional
 
 Este projeto foi criado com a intenção de ser vulnerável a ataques de SQL Injection. **Nenhuma entrada do usuário é sanitizada no frontend**, permitindo a inserção de payloads maliciosos para testar a segurança da API backend.
