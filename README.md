@@ -8,6 +8,15 @@ Este projeto é um frontend em Angular desenvolvido para interagir com uma API R
 
 O propósito deste frontend é servir como uma ferramenta didática para demonstrar ataques de SQL Injection em um ambiente controlado. Ele consome uma API backend que foi projetada para ser vulnerável.
 
+## 📡 Configuração da API
+
+A aplicação está configurada para usar diferentes URLs da API dependendo do ambiente:
+
+- **Desenvolvimento**: `http://localhost:3000`
+- **Produção**: `https://apisimulation.fourdevs.com.br/`
+
+A configuração é automaticamente selecionada baseada no modo de build.
+
 ## 🧱 Stack
 
 - **Angular**: Framework frontend
