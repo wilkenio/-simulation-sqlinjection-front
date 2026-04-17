@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Search Products</h2>
+  <div class="form-group">
+    <label for="name">Product Name</label>
+    <input type="text" id="name" [(ngModel)]="name" placeholder="Enter product name to search">
+  </div>
+  <button (click)="search()">Search</button>
+
+  <div class="results" *ngIf="request">
+    <h3>Request Sent</h3>
+    <pre>{{ request | json }}</pre>
+  </div>
+
+  <div class="results" *ngIf="response">
+    <h3>Response Received</h3>
+    <pre>{{ response | json }}</pre>
+  </div>
+
+  <div class="results" *ngIf="products.length > 0">
+    <h3>Products Found</h3>
+    <ul>
+      <li *ngFor="let product of products">
+        ID: {{ product.id }}, Name: {{ product.name }}, Price: {{ product.price }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Search Users</h2>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="username" placeholder="Enter username to search">
+  </div>
+  <button (click)="search()">Search</button>
+
+  <div class="results" *ngIf="request">
+    <h3>Request Sent</h3>
+    <pre>{{ request | json }}</pre>
+  </div>
+
+  <div class="results" *ngIf="response">
+    <h3>Response Received</h3>
+    <pre>{{ response | json }}</pre>
+  </div>
+
+  <div class="results" *ngIf="users.length > 0">
+    <h3>Users Found</h3>
+    <ul>
+      <li *ngFor="let user of users">
+        ID: {{ user.id }}, Username: {{ user.username }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Delete User</h2>
+  <div class="form-group">
+    <label for="id">User ID</label>
+    <input type="text" id="id" [(ngModel)]="id" placeholder="Enter user ID to delete">
+  </div>
+  <button (click)="delete()">Delete</button>
+
+  <div class="results" *ngIf="request">
+    <h3>Request Sent</h3>
+    <pre>{{ request | json }}</pre>
+  </div>
+
+  <div class="results" *ngIf="response">
+    <h3>Response Received</h3>
+    <pre>{{ response | json }}</pre>
+  </div>
+</div>
